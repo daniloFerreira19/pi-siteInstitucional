@@ -2,29 +2,117 @@
     margin: 0;
     padding: 0;
     font-family: Helvetica; 
-} .header{
+} 
+
+.header{
     height: 110px;
     background-color: black;
     border: solid aquamarine 5px;
-} .container{
+} 
+
+.container{
     width: 80%;
     height: 100%;
     margin: auto;    
-} .header .container {
+} 
+
+.header .container {
     display: flex;
     justify-content: space-between;
     align-items: center;
-} .navBar {
+} 
+
+.navBar {
     display: flex;
     list-style: none;
     width: 50%;
     justify-content: space-between;
     color: goldenrod;
-} .header h1 {
+} 
+
+.header h1 {
     color: aquamarine;
-} .navBar .ativo{
+} 
+
+.navBar .ativo{
     font-weight: bolder;
 }
+
 .navBar a {
     color: goldenrod;
+}
+
+.banner {
+    height: 500px;
+    background-image: url(https://i.pinimg.com/originals/90/d3/69/90d369307d0a2cac8dd2cea650f4f797.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.message {
+    width: 15%;
+    font-size: 30px;
+}
+
+.message span {
+    font-weight: bolder;
+}
+
+.proposito {
+    height: 450px;
+    background-color: #E5E5E5;
+}
+
+.proposito .container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.proposito .container h2 {
+    color: red;
+    padding: 25px;
+    border-radius: 25px;
+}
+
+.proposito .container .mvv div img{
+    height: 100px;
+    width: 100px;
+}
+
+.proposito .container .mvv {
+    margin-top: 50px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.proposito .container .mvv div{
+    width: 20vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.proposito .container .mvv div h3 {
+    color: red;
+    font-weight: bolder;
+    margin: 25px 0;
+}
+
+.footer {
+    background-color: #7FFFD4;
+    height: 180px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.footer p {
+    font-weight: bolder;
 }
