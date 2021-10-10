@@ -20,19 +20,21 @@
             </ul>
         </div>
     </div>
-    <div class="formContainer">
-        <h2>Faça seu cadastro!</h2>
-        <label for="inputNome">Nome</label>
-        <input type="text" id="inputNome"><br>
-        <label for="inputSobrenome">Sobrenome</label>
-        <input type="text" id="inputSobrenome"><br>
-        <label for="inputEmail">E-mail</label>
-        <input type="email" id="inputEmail"><br>
-        <label for="inputSenha">Senha</label>
-        <input type="password" id="inputSenha" onkeyup="calculateStrength()">
-        <div id="showPasswordStrength" style="display: none; font-weight: bolder;">Senha <span id="strength"></span></div>
-        <img id="imgSeePassword" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" height="30px" onclick="showOrHidePassword()"> 
-        <button onclick="validateFields()">Confirmar cadastro</button>
+    <div class="banner">
+        <div class="formContainer">
+            <h2>Faça seu cadastro!</h2>
+            <label for="inputNome">Nome</label>
+            <input type="text" id="inputNome"><br>
+            <label for="inputSobrenome">Sobrenome</label>
+            <input type="text" id="inputSobrenome"><br>
+            <label for="inputEmail">E-mail</label>
+            <input type="email" id="inputEmail"><br>
+            <label for="inputSenha">Senha</label>
+            <input type="password" id="inputSenha" onkeyup="calculateStrength()">
+            <div id="showPasswordStrength" style="display: none; font-weight: bolder;">Senha <span id="strength"></span></div>
+            <img id="imgSeePassword" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" height="30px" onclick="showOrHidePassword()"> 
+            <button onclick="validateFields()">Confirmar cadastro</button>
+        </div>
     </div>
 </body>
 </html>

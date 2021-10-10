@@ -20,15 +20,16 @@
             </ul>
         </div>
     </div>
-
-    <div class="formContainer">
-        <h2>Entre na sua conta!</h2>
-        <label for="inputEmail">Email:</label>
-        <input type="text" id="inputEmail">
-        <label for="inputSenha">Senha:</label>
-        <input type="password" id="inputSenha" >
-        <img id="imgSeePassword" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" height="30px" onclick="showOrHidePassword()"> 
-        <button onclick="signIn()">Entrar</button>
+    <div class="banner">
+        <div class="formContainer">
+            <h2>Entre na sua conta!</h2>
+            <label for="inputEmail">Email:</label>
+            <input type="text" id="inputEmail">
+            <label for="inputSenha">Senha:</label>
+            <input type="password" id="inputSenha" >
+            <img id="imgSeePassword" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" height="30px" onclick="showOrHidePassword()"> 
+            <button onclick="signIn()">Entrar</button>
+        </div>
     </div>
 </body>
 </html>
@@ -54,7 +55,7 @@
             alert("Preencha todos os campos!")
         } else if (!email.includes("@") || !email.includes(".com")) {
             alert("Seu email deve ter @ e .com!")
-        } else if (password.length < 8) {
+        } else if (password.length   < 8) {
             alert("Crie uma senha forte!")
         } else {
             alert("Login concluído com sucesso!")
