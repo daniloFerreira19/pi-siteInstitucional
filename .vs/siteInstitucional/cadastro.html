@@ -20,5 +20,75 @@
             </ul>
         </div>
     </div>
+    <div class="formContainer">
+        <h2>Faça seu cadastro!</h2>
+        <label for="inputNome">Nome</label>
+        <input type="text" id="inputNome"><br>
+        <label for="inputSobrenome">Sobrenome</label>
+        <input type="text" id="inputSobrenome"><br>
+        <label for="inputEmail">E-mail</label>
+        <input type="email" id="inputEmail"><br>
+        <label for="inputSenha">Senha</label>
+        <input type="password" id="inputSenha" onkeyup="calculateStrength()">
+        <div id="showPasswordStrength" style="display: none; font-weight: bolder;">Senha <span id="strength"></span></div>
+        <img id="imgSeePassword" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" height="30px" onclick="showOrHidePassword()"> 
+        <button onclick="validateFields()">Confirmar cadastro</button>
+    </div>
 </body>
 </html>
+
+<script>
+    function showOrHidePassword() {
+        let password = document.getElementById("inputSenha")
+        
+        if (password.type == "password") {
+            password.type = "text"
+            document.getElementById("imgSeePassword").src = "https://brasilbybus.com/Content/Images/olho_f.png"
+        } else {
+            password.type = "password"
+            document.getElementById("imgSeePassword").src = "https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"
+        }
+    }
+    
+    function calculateStrength() {
+        let password = document.getElementById("inputSenha").value
+        
+        if (password.length == 0 || password == "") {
+            document.getElementById("showPasswordStrength").style.display = "none"
+        } else if (password.length <= 4) {
+            document.getElementById("showPasswordStrength").style.color = "red"
+            document.getElementById("strength").innerHTML = "fraca!" 
+            document.getElementById("showPasswordStrength").style.display = "block"
+        } else if (password.length < 8) {
+            document.getElementById("showPasswordStrength").style.color = "yellow"
+            document.getElementById("strength").innerHTML = "média!"
+            document.getElementById("showPasswordStrength").style.display = "block"
+        } else {
+            document.getElementById("showPasswordStrength").style.color = "green"
+            document.getElementById("strength").innerHTML = "forte!"
+            document.getElementById("showPasswordStrength").style.display = "block"
+        }
+    }
+
+    function validateFields() {
+        let name = document.getElementById("inputNome").value
+        let lastName = document.getElementById("inputSobrenome").value
+        let email = document.getElementById("inputEmail").value
+        let password = document.getElementById("inputSenha").value 
+
+        if (name == "" || lastName == "" || email == "" || password == "") {
+            alert("Preencha todos os campos!")
+        } else if (name.length <= 3) {
+            alert("Seu nome deve ter mais de 3 caracteres!")
+        } else if (lastName.length <= 3) {
+            alert("Seu sobrenome deve ter mais de 3 caracteres!")
+        } else if (!email.includes("@") || !email.includes(".com")) {
+            alert("Seu email deve conter @ e .com")
+        } else if (password.length < 8) {
+            alert("Crie uma senha forte!")
+        } else {
+            alert("Cadastro concluído com sucesso!")
+        }
+    }
+</script>
+

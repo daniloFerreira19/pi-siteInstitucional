@@ -116,3 +116,18 @@
 .footer p {
     font-weight: bolder;
 }
+
+.formContainer {
+    width: 400px;
+    height: 310px;
+    background-color: transparent;
+    border: 2px cyan solid;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 5%;
+    margin-left: 35%;
+}
+

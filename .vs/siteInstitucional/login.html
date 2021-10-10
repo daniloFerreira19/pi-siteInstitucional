@@ -20,5 +20,44 @@
             </ul>
         </div>
     </div>
+
+    <div class="formContainer">
+        <h2>Entre na sua conta!</h2>
+        <label for="inputEmail">Email:</label>
+        <input type="text" id="inputEmail">
+        <label for="inputSenha">Senha:</label>
+        <input type="password" id="inputSenha" >
+        <img id="imgSeePassword" src="https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png" height="30px" onclick="showOrHidePassword()"> 
+        <button onclick="signIn()">Entrar</button>
+    </div>
 </body>
 </html>
+
+<script>
+    function showOrHidePassword() {
+        let password = document.getElementById("inputSenha")
+        
+        if (password.type == "password") {
+            password.type = "text"
+            document.getElementById("imgSeePassword").src = "https://brasilbybus.com/Content/Images/olho_f.png"
+        } else {
+            password.type = "password"
+            document.getElementById("imgSeePassword").src = "https://cdn0.iconfinder.com/data/icons/ui-icons-pack/100/ui-icon-pack-14-512.png"
+        }
+    }
+
+    function signIn() {
+        let email = document.getElementById("inputEmail").value 
+        let password = document.getElementById("inputSenha").value
+
+        if (email == "" || password == "") {
+            alert("Preencha todos os campos!")
+        } else if (!email.includes("@") || !email.includes(".com")) {
+            alert("Seu email deve ter @ e .com!")
+        } else if (password.length < 8) {
+            alert("Crie uma senha forte!")
+        } else {
+            alert("Login concluído com sucesso!")
+        }
+    }
+</script>
